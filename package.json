@@ -1,0 +1,54 @@
+{
+  "name": "toy-dap-ruby",
+  "displayName": "Toy DAP (Ruby)",
+  "description": "Minimal Ruby debug adapter example for learning DAP",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "contributes": {
+    "debuggers": [
+      {
+        "type": "toy-ruby",
+        "label": "Toy Ruby DAP",
+        "program": "./adapter/dap.rb",
+        "runtime": "ruby",
+        "languages": [
+          "ruby"
+        ],
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "program"
+            ],
+            "properties": {
+              "program": {
+                "type": "string",
+                "description": "Path to the .rb file"
+              },
+              "stopOnEntry": {
+                "type": "boolean",
+                "default": true,
+                "description": "Stop immediately on entry"
+              }
+            }
+          }
+        },
+        "configurationSnippets": [
+          {
+            "label": "Toy Ruby Debug: Launch",
+            "description": "Launch a Toy Ruby program",
+            "body": {
+              "type": "toy-ruby",
+              "request": "launch",
+              "name": "Toy Ruby Debug",
+              "program": "${workspaceFolder}/program.rb",
+              "stopOnEntry": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

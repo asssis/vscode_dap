@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Toy Ruby Debug",
+      "type": "toy-ruby",
+      "request": "launch",
+      "program": "${workspaceFolder}/program.rb",
+      "stopOnEntry": true
+    }
+  ]
+}

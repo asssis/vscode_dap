@@ -1,0 +1,7 @@
+[2026-01-31T13:52:26.245Z] [INFO] === Natural DAP Extension iniciada ===
+[2026-01-31T13:52:26.247Z] [INFO] Log file: /home/assis/projetos/debugger_vscode/example/.ruby-dap-logs/natural_extension_2026-01-31T13-52-26.log
+[2026-01-31T13:52:26.248Z] [INFO] Natural DAP Adapter extension ativado
+[2026-01-31T13:52:26.250Z] [INFO] Debug configuration provider registrado
+[2026-01-31T13:52:26.532Z] [INFO] Sessão de debug iniciada: Toy Ruby Debug (type: toy-ruby)
+[2026-01-31T13:52:46.895Z] [INFO] Sessão de debug terminada: Toy Ruby Debug
+[2026-01-31T13:52:52.429Z] [INFO] Sessão de debug iniciada: Toy Ruby Debug (type: toy-ruby)
