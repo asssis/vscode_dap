@@ -39,3 +39,9 @@ Sem dependências externas.
 - [2026-01-31 09:59:58.944] DAP ENTRADA: {"command":"stackTrace","arguments":{"threadId":1,"startFrame":0,"levels":20},"type":"request",- "seq":12}
 - [2026-01-31 09:59:59.359] DAP ENTRADA: {"command":"scopes","arguments":{"frameId":1},"type":"request","seq":13}
 - [2026-01-31 09:59:59.362] DAP ENTRADA: {"command":"variables","arguments":{"variablesReference":1},"type":"request","seq":14}
+
+
+
+
+<img width="1171" height="196" alt="Captura de tela de 2026-01-31 10-13-48" src="https://github.com/user-attachments/assets/88ff7bc7-7633-409c-b762-2af40573abd1" />
+
