@@ -16,6 +16,15 @@ Ele simula um programa linha a linha para permitir usar **F10**, **F11** e ver o
 
 O highlight vai avançar linha a linha no arquivo `.rb`.
 
+## Comunicação stdin/stdout (DAP)
+
+O VS Code inicia o adapter Ruby e conversa com ele via **stdin/stdout**:
+
+- **stdin**: o VS Code envia requests DAP como JSON com header `Content-Length`.
+- **stdout**: o adapter responde com `response` e emite `event` (ex.: `stopped`, `terminated`).
+
+No `adapter/dap.rb`, o parser acumula chunks, lê o `Content-Length`, extrai o JSON e processa cada request.
+
 ## Arquivos importantes
 
 - `adapter/dap.rb`: o debug adapter Ruby (DAP via stdin/stdout)
@@ -34,6 +43,9 @@ Sem dependências externas.
 
 ## Exemplo de troca de mensagem
 
+Abaixo tem um exemplo da comunicação entre o stdin e stdout, é através dessa comunicação que é possivel integrar
+o visual code com o DAP, abaixo tempo um exemplo do stepIn, variables e outros eventos...
+
 - [2026-01-31 09:59:58.927] DAP ENTRADA: {"command":"stepIn","arguments":{"threadId":1},"type":"request","seq":10}
 - [2026-01-31 09:59:58.934] DAP ENTRADA: {"command":"threads","type":"request","seq":11}
 - [2026-01-31 09:59:58.944] DAP ENTRADA: {"command":"stackTrace","arguments":{"threadId":1,"startFrame":0,"levels":20},"type":"request",- "seq":12}
@@ -44,4 +56,3 @@ Sem dependências externas.
 
 
 <img width="1171" height="196" alt="Captura de tela de 2026-01-31 10-13-48" src="https://github.com/user-attachments/assets/88ff7bc7-7633-409c-b762-2af40573abd1" />
-
