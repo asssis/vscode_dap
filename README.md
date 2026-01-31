@@ -1,4 +1,4 @@
-# Toy DAP (Ruby puro)
+# DAP (Ruby puro)
 
 Este projeto é um debug adapter mínimo escrito **100% em Ruby** para entender o Debug Adapter Protocol (DAP).
 Ele simula um programa linha a linha para permitir usar **F10**, **F11** e ver o **highlight** da linha atual no VS Code.
